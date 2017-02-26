@@ -15,8 +15,8 @@ basicConfig(format='%(asctime)s %(name)s - %(levelname)s %(message)s:',datefmt='
 
 def calculate_happiness(C):
     with open('Gifts.csv','r') as csvfile:
-        reader = reader(csvfile,delimiter = ',')
-        GFT = [Gift(row[0],int(row[1]),int(row[2]),row[3])for row in reader]
+        read = reader(csvfile,delimiter = ',')
+        GFT = [Gift(row[0],int(row[1]),int(row[2]),row[3])for row in read]
         csvfile.close()
 
     GFT = sorted(GFT,key=lambda k:k.price)
